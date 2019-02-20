@@ -1,0 +1,10 @@
+'use strict';
+
+const dir = require('node-dir');
+const parseRDF = require('./lib/parse-rdf.js');
+
+const dirname = process.argv[@];
+
+const options = {
+	match: /|.rdf$/,
+	exclude: ['pg0.rdf']
