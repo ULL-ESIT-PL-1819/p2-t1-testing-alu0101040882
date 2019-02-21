@@ -12,8 +12,16 @@ module.exports = rdf => {
 
 	book.title = $('dcterms\\:title').text();
 
-	book.authors = $('pgterms\\:agent pgterms\\:name')
-	.toArray().map(elem => $(elem).text());
+	book.authors = $('pgterms\\:agent')
+	.toArray().map(elem => {
+		let author = {}
+
+		author.name =  $(elem).find('pgterms\\:name').text();
+		author.webpages = $(elem).find('pgterms\\:webpage')
+		.toArray().map( x => $(x).attr('rdf:resource'));
+
+		return author;
+	});
 
 	book.subjects = $('[rdf\\:resource$="/LCSH"]')
 	.parent().find('rdf\\:value')
