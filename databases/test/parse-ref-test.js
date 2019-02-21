@@ -28,5 +28,12 @@ describe('parseRDF' , () => {
 		.that.is.an('array').with.lengthOf(2)
 		.and.contains('Military art and science -- Early works to 1800')
 		.and.contains('War -- Early works to 1800');
+
+		expect(book).to.have.property('lcc')
+		.that.is.a('string').with.a.lengthOf(1)
+		.and.match(/^[^IOWXY]/);
+
+		expect(book).to.have.a.property('sources')
+		.that.is.an('array').with.lengthOf(10)
 	});
 });

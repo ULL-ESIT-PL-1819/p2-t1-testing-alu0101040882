@@ -19,6 +19,22 @@ module.exports = rdf => {
 	.parent().find('rdf\\:value')
 	.toArray().map(elem => $(elem).text());
 
+
+	book.lcc = $('[rdf\\:resource$="/LCC"]')
+	.parent().find('rdf\\:value').text();
+
+
+	book.sources = $('pgterms\\:file')
+	.toArray().map( elem =>  {
+
+		let source = {};
+		source.url = $(elem).attr('rdf:about');
+		source.date = $(elem).find('dcterms\\:modified').text();
+		source.desc = $(elem).find('rdf\\:Description').find('rdf\\:value').text();
+
+		return source;
+	});
+
 	return book;
 
 };
