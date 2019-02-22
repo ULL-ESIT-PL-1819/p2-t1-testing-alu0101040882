@@ -1,9 +1,10 @@
 language: node_js
-node:
-- 11.9.0
-
+node_js:
+  - "iojs"
+  - "7"
 npm:
-- 6.5.0
+ - "6.5.0"
 
 before_install:
   - cd databases
+ 
