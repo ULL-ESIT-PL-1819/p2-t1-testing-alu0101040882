@@ -22,7 +22,7 @@ describe('parseRDF' , () => {
 		expect(book).to.have.a.property('authors')
         	.that.is.an('array').with.lengthOf(2)
     	   	.and.contains({ "name": "Sunzi, active 6th century B.C.",
-      		"webpages": ["http://en.wikipedia.org/wiki/Sun_Tzu", 
+      		"webpages": ["http://en.wikipedia.org/wiki/Sun_Tzu",
 		"http://zh.wikipedia.org/wiki/%E5%AD%99%E6%AD%A6"]})
         	.and.contains({ "name": "Giles, Lionel",
       		"webpages": ["http://en.wikipedia.org/wiki/Lionel_Giles"] });
