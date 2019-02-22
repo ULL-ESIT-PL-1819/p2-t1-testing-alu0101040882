@@ -211,11 +211,19 @@ y el código necesario para pasar las pruebas el siguiente:
 Mediante estos dos fichero extraemos los atributos de id, autores, temas, lcc y fuentes del fichero .rdf y comprobamos que el contenido de los mismos sea el esperado.
 
 **Capturas del funcionamiento:**
+
 Test:
+
+
 ![enter image description here](https://lh3.googleusercontent.com/7NpBcbUcXBu9cvi_p2W7mj9IiTP3dDPpLXp3DpV-n76O2OkD4Pz52MNBKBT038AEPSjQmSTaAKg)
 
+
 rdf-to-json.js
+
+
 ![enter image description here](https://lh3.googleusercontent.com/6nAMWvoKr9zX5mjIrtKSCz5FqPLTRNWSRJGkB0VyAP3S6hNvelXeuBPpzK6uPMAfSSyUpsWjUXk)![enter image description here](https://lh3.googleusercontent.com/Ul4SiG36ER9MQfhFvvpm4xILibflD5ybndQv5fzcxwS7auHvB_MlajUE8XzgEyZfqb1AHaYZK_8)
 
 Travis:
+
+
 ![enter image description here](https://lh3.googleusercontent.com/cjvNFpqoy7UruH1qfe3QrirImogBdm8RVTbhkFGoGhtrKbErXNiRWhPQTR-elvYFm8ORMzvV7Mc)
